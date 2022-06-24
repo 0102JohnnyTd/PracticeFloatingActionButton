@@ -16,32 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ye-Xq-YZY">
-                                <rect key="frame" x="315" y="783" width="67" height="31"/>
-                                <color key="backgroundColor" red="0.94973593950000001" green="0.74756163360000005" blue="0.34890815619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-bf-WTN">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1F-js-k9R">
+                                <rect key="frame" x="317.5" y="768" width="64.5" height="62"/>
+                                <color key="backgroundColor" red="0.94973593950000001" green="0.74756163360000005" blue="0.34890815619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="＋">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
+                                    <color key="baseForegroundColor" systemColor="systemGray6Color"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ye-Xq-YZY" secondAttribute="bottom" constant="48" id="4Vg-TC-dpH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s1F-js-k9R" secondAttribute="bottom" constant="32" id="7SV-Dy-0sO"/>
                             <constraint firstItem="5ET-bf-WTN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AMA-9z-tQy"/>
                             <constraint firstItem="5ET-bf-WTN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="U4O-6d-CGS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ye-Xq-YZY" secondAttribute="trailing" constant="32" id="WXd-Bp-Omd"/>
                             <constraint firstItem="5ET-bf-WTN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tNs-O7-8EI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s1F-js-k9R" secondAttribute="trailing" constant="32" id="w3l-94-ld6"/>
                             <constraint firstItem="5ET-bf-WTN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wJ2-VH-UDs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="customTableView" destination="5ET-bf-WTN" id="mmo-j1-CyV"/>
+                        <outlet property="floatingActionButton" destination="s1F-js-k9R" id="fEk-1C-KMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,6 +54,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
